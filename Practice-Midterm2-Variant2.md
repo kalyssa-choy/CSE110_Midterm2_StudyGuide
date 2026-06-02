@@ -80,8 +80,8 @@ has the most **GitHub stars**. Fill in the table.
 
 | | |
 |---|---|
-| **Positive Outcomes** | |
-| **Negative Outcomes** | |
+| **Positive Outcomes** |many stars indicate many people have viewed that library, showing that it has some credibility since there could be a lot of people that have reviewed and used the library.|
+| **Negative Outcomes** |it is ambiguous to why people star different libraries and everyone has different needs, so it could not be beneficial to you as it is to others. additionally, it could be starred for reasons like if people want to contribute to open source, but it doesn't ensure that the library is good.|
 
 <br>
 
@@ -92,41 +92,41 @@ answer.
 | Pattern | What it decouples (what can change independently) | Code smell it avoids |
 |---|---|---|
 | *Pub/Sub* | *Publisher and subscriber communicate via events, so neither holds a hardcoded reference; either can change independently.* | *Component A directly calling Component B's methods.* |
-| Event Delegation | | |
-| Components / Decomposition | | |
-| CRUD service facade | | |
-| Routing | | |
+| Event Delegation | When a parent element handles events for many children events | Improved efficiency and reduces the amount of calls needed for each child element|
+| Components / Decomposition | Reusable UI components/functions so that you don't have to duplicate code | Avoids duplicate code and makes the updating/changing of components easier and more uniform |
+| CRUD service facade | Create, read, update, delete. The core functions for a minimalistic backend | this avoids making calls too complex |
+| Routing | different routes allow for different paths to be calls so calling functions is more intuitive | avoids confusion over which method for which route should be used|
 
 <br>
 
 **9. [3 pts]** Fill in the blanks (architecture catchphrases).
 
-**DRY** reduces ___________________ ; **orthogonality** reduces ___________________
+**DRY** reduces repeated code and inconsistencies ; **orthogonality** reduces maintenance work and having 1 change impact many components 
 among components. **YAGNI** warns you not to add features/abstractions before you
-___________________ .
+actually need it.
 
 <br>
 
 **10. [3 pts] Knowledge Spreading:** Project knowledge often gets scattered across Slack,
 Google Drive, issue trackers, wikis, and people's heads.
 
-Definition (what's the risk): ____________________________________
+Definition (what's the risk): It is difficult to find a uniform area where the project and its goals are clearly defined. There could be inconsistencies as one knowledge source could be outdated from another.
 <br>
-Mitigation: ____________________________________________________
+Mitigation: To mitigate this, you could have one central place for an overarching goal/outline like a readme.md file in the root. You can also have where specific knowledge is needed close to that particular area, and then connect it in a table of contents in the readme file for easier access. 
 <br>
-Possible Cause(s): _____________________________________________
+Possible Cause(s): There are different components used and they can be created on different platforms so it is difficult to keep centralized unless there is someone constantly updating a centralized area. 
 
 <br>
 
 **11. [12 pts] Architecture: Decomposition, Cohesion, Coupling.**
 
-Good architecture aims for **high** ___________________ and **loose**
-___________________ .
+Good architecture aims for **high** cohesion and **loose**
+coupling.
 
 Applying a design pattern *before* you deeply understand both the problem and the
 pattern is generally [ helpful ] [ harmful ] [ both ].
 
-Explain: ________________________________________________________
+Explain: I would say harmful or both because if you don't understand the problem then you can risk overengineering and if you don't understand the pattern then you don't understand the requirements needed to complete this. However, if you have some idn of simple baseline knowledge and do the most minimalistic approach to solve, you can use a progressive enhancement approach where you continuously improve from a baseline. 
 <br><br>
 
 A team splits a monolith into many tiny **microservices**. State one benefit and one
@@ -166,31 +166,35 @@ ________________________________________________
 
 c) **[3]** What is a `.gitignore` for, and name two things you'd typically put in it?
 
-________________________________________________
+git ignore is so that you dont push secrets or unecessary directories to the github repo. you would put .env file which holds your api keys and the node_modules directory since that has a lot of files that are unecessary since people can redownload with the npm and package.json.
 
 d) **[2]** To get your branch reviewed *before* it merges into `main`, you open a
-___________________ . If your new code collides with others' changes during a merge, you
-get a ___________________ .
+pull request . If your new code collides with others' changes during a merge, you
+get a merge conflict.
 
 e) **[3]** URL case sensitivity — circle **insensitive** or **sensitive** for each:
-   Protocol ( ins / sens )  Domain ( ins / sens )  Path/Filename ( ins / sens )
+   Protocol ( ins )  Domain ( ins )  Path/Filename ( sens )
 
-f) **[2]** Pick the right image format: a company **logo** → ________ ; a
-**photograph** → ________ .
+f) **[2]** Pick the right image format: a company **logo** → .svg ; a
+**photograph** → .jpeg .
 
 g) **[3]** Name two semantic HTML elements that can **reduce the need for custom
 JavaScript**, and say why semantic markup is preferred over `<div>` soup.
 
-________________________________________________
+button and label
 
 h) **[2]** What does **JSDoc** let you do, and how does that fight stale documentation?
 
-________________________________________________
+- What a function does
+- Parameters
+- Return values
+- Types
+- Author notes
 
 i) **[3]** Client-side validation vs server-side validation: which is for **UX**, which
 is for **security**, and why is client-side validation *alone* unsafe?
 
-________________________________________________
+client side is for UX and server is for security. Client-side validation alone is unsafe because users can bypass, modify, or completely disable client-side code before sending data to the server. Since the client cannot be trusted, the server must validate all incoming data to prevent invalid, malicious, or unauthorized requests.
 
 j) **[3]** What is **chaos engineering**, and name one thing **high availability**
 requires besides it.
@@ -200,12 +204,13 @@ ________________________________________________
 k) **[2]** Write the git command to initialize a repo in the current directory, and the
 command to stage a file named `index.html`.
 
-________________________________________________
+git init
+git add index.html
 
 l) **[2]** A teammate suggests committing the `node_modules/` folder into the repo. Give
 one reason that's usually a bad idea.
 
-________________________________________________
+That's a bad idea because the node modules directory holds a large amount of files, so committing this to the github repo would not only be unecessary since people can reinstall on their own devices with npm and the package.json file, but it also would slow down cloning, pulling, and pushing.
 
 ---
 
