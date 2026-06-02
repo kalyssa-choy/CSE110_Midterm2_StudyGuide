@@ -53,21 +53,25 @@ image contains readable text. Discuss the **positive and negative** aspects usin
 **trade-off-oriented thinking**. Name at least two specific "-ilities" at risk and give
 one better choice.
 
-Positive:
+Positive: usability since it could make the page visually appealing for the information needed to communicate.
 <br><br>
-Negative:
+Negative: A 4 MB unoptimized image hurts performance and possibly availability/scalability because it takes longer to load and uses more bandwidth. Missing alt text hurts accessibility because screen readers cannot describe it. Missing width/height can cause layout shift, hurting usability. Text inside the image is also bad for accessibility and responsiveness because it may not scale well or be readable on all devices.
 <br><br>
-Better choice:
+Better choice: a better choice would at least having an alternate option in case the photo doesn't render so users know what it is displaying while also adding styling in a css file to ensure the image isn't too large/small. Also, if the image just displays text, moving it into a readable HTML text component would be better instead of embedding it inside an image. 
 <br><br>
 
 **5. [5 pts]** Your manager wants to use **code coverage percentage** as *the* quality
 metric and reward developers for hitting 90%. Discuss the **pros and cons** of this from
 multiple angles, including what happens when people "code to the grade."
 
+Using code coverage as one quality metric can be helpful because it encourages developers to write tests and makes it easier to find untested parts of the codebase. A 90% goal can push the team to avoid completely untested features and catch simple bugs earlier. However, using coverage percentage as the quality metric is risky because high coverage does not mean high-quality tests or bug-free software. Developers may “code to the grade” by writing shallow tests that execute lines without checking meaningful behavior. They might also avoid writing complex but necessary code because it lowers coverage, or write unnecessary tests just to raise the percentage.
+
 <br><br><br><br>
 
 **6. [3 pts]** Code review measurably improves quality, yet developers often resist it or
 rubber-stamp PRs with an empty "lgtm." Why do you think this happens?
+
+Developers may resist code review because it takes time away from writing their own code and can slow down feature development. Reviewers may also feel pressure to approve PRs quickly, especially when deadlines are tight. As a result, some developers rubber-stamp reviews with "LGTM" without carefully examining the code. Additionally, reviewing code requires effort and expertise, and some people may feel uncomfortable criticizing a teammate's work.
 
 <br><br><br>
 
