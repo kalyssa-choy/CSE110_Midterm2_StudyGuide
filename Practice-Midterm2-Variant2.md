@@ -1,8 +1,8 @@
 # CSE 110 Midterm 2 (Practice — Variant 2) — Powell Spring 2026
 
-Name: ______________________________   Score: ______ / 120
+Name: ____Kalyssa Choy___   Score: ______ / 120
 
-PID: ______________________   Team #: ______
+PID: ___A18209149____   Team #: _4__
 
 > Variant 2: **all-new questions**, same format and difficulty as Midterm 1. This set
 > leans on the corners Variant 1 touched less — Operating & Evolving, Building & Deving,
@@ -19,20 +19,26 @@ PID: ______________________   Team #: ______
 precisely as possible. Be specific and terse — and make clear it is **not** simply
 "CI/CD."
 
+DevOps is the practice that integrated development and operations teams to automate, streamline, and improve the process of building, testing, deploying, and maintaining software. It's goal is faster more reliable delivery through collaboration, automation, monitoring, and feeback.
+
 <br><br><br>
 
 **2. [3 pts]** What was the point of the last question? Why would an interviewer want
 you to separate a *cultural* practice (DevOps) from a *technical* one (CI/CD)? Should
 you care about this distinction on your own team? Why?
 
+The interviewer would want me to separate a cultural practice from a technical one since they want to understand how you work in a team. I should care about this distinction because DevOps requires a lot of collaboration and communication, so if we only focus on the technical side, we are missing the teamwork and collaboration component. 
+
 <br><br><br>
 
 **3. [3 pts]** "Software is greater than code." List **at least three** non-code
 artifacts that are still part of the *software* a team produces.
 
-1. ________________________
-2. ________________________
-3. ________________________
+1. user stories
+2. documentation
+3. user manuals
+4. meeting notes
+5. presentations
 
 <br>
 
